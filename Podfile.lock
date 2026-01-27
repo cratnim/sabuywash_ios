@@ -1,0 +1,401 @@
+PODS:
+  - Alamofire (5.9.1)
+  - app_links (6.4.1):
+    - Flutter
+  - app_settings (5.1.1):
+    - Flutter
+  - camera_avfoundation (0.0.1):
+    - Flutter
+  - CryptoSwift (1.8.4)
+  - device_info_plus (0.0.1):
+    - Flutter
+  - Firebase/CoreOnly (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+  - Firebase/Crashlytics (11.15.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 11.15.0)
+  - Firebase/DynamicLinks (11.15.0):
+    - Firebase/CoreOnly
+    - FirebaseDynamicLinks (~> 11.15.0)
+  - Firebase/Messaging (11.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 11.15.0)
+  - firebase_core (3.15.2):
+    - Firebase/CoreOnly (= 11.15.0)
+    - Flutter
+  - firebase_crashlytics (4.3.10):
+    - Firebase/Crashlytics (= 11.15.0)
+    - firebase_core
+    - Flutter
+  - firebase_dynamic_links (6.1.10):
+    - Firebase/DynamicLinks (= 11.15.0)
+    - firebase_core
+    - Flutter
+  - firebase_messaging (15.2.10):
+    - Firebase/Messaging (= 11.15.0)
+    - firebase_core
+    - Flutter
+  - FirebaseCore (11.15.0):
+    - FirebaseCoreInternal (~> 11.15.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/Logger (~> 8.1)
+  - FirebaseCoreExtension (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+  - FirebaseCoreInternal (11.15.0):
+    - "GoogleUtilities/NSData+zlib (~> 8.1)"
+  - FirebaseCrashlytics (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+    - FirebaseInstallations (~> 11.0)
+    - FirebaseRemoteConfigInterop (~> 11.0)
+    - FirebaseSessions (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - FirebaseDynamicLinks (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+  - FirebaseInstallations (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/UserDefaults (~> 8.1)
+    - PromisesObjC (~> 2.4)
+  - FirebaseMessaging (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.1)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/Reachability (~> 8.1)
+    - GoogleUtilities/UserDefaults (~> 8.1)
+    - nanopb (~> 3.30910.0)
+  - FirebaseRemoteConfigInterop (11.15.0)
+  - FirebaseSessions (11.15.0):
+    - FirebaseCore (~> 11.15.0)
+    - FirebaseCoreExtension (~> 11.15.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/UserDefaults (~> 8.1)
+    - nanopb (~> 3.30910.0)
+    - PromisesSwift (~> 2.1)
+  - Flutter (1.0.0)
+  - flutter_keyboard_visibility (0.0.1):
+    - Flutter
+  - flutter_local_notifications (0.0.1):
+    - Flutter
+  - flutter_native_splash (2.4.3):
+    - Flutter
+  - flutter_udid (0.0.1):
+    - Flutter
+    - KeychainAccess
+  - FlutterPluginRegistrant (0.0.1):
+    - app_links
+    - app_settings
+    - camera_avfoundation
+    - device_info_plus
+    - firebase_core
+    - firebase_crashlytics
+    - firebase_dynamic_links
+    - firebase_messaging
+    - Flutter
+    - flutter_keyboard_visibility
+    - flutter_local_notifications
+    - flutter_native_splash
+    - flutter_udid
+    - geolocator_apple
+    - google_maps_flutter_ios
+    - google_mlkit_barcode_scanning
+    - google_mlkit_commons
+    - http_certificate_pinning
+    - image_gallery_saver_plus
+    - package_info_plus
+    - path_provider_foundation
+    - permission_handler_apple
+    - qr_code_scanner_plus
+    - syncfusion_flutter_pdfviewer
+    - url_launcher_ios
+    - webview_flutter_wkwebview
+  - geolocator_apple (1.2.0):
+    - Flutter
+    - FlutterMacOS
+  - Google-Maps-iOS-Utils (6.1.0):
+    - GoogleMaps (~> 9.0)
+  - google_maps_flutter_ios (0.0.1):
+    - Flutter
+    - Google-Maps-iOS-Utils (< 7.0, >= 5.0)
+    - GoogleMaps (< 10.0, >= 8.4)
+  - google_mlkit_barcode_scanning (0.14.1):
+    - Flutter
+    - google_mlkit_commons
+    - GoogleMLKit/BarcodeScanning (~> 7.0.0)
+  - google_mlkit_commons (0.11.0):
+    - Flutter
+    - MLKitVision
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleMaps (9.4.0):
+    - GoogleMaps/Maps (= 9.4.0)
+  - GoogleMaps/Maps (9.4.0)
+  - GoogleMLKit/BarcodeScanning (7.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 6.0.0)
+  - GoogleMLKit/MLKitCore (7.0.0):
+    - MLKitCommon (~> 12.0.0)
+  - GoogleToolboxForMac/Defines (4.2.1)
+  - GoogleToolboxForMac/Logger (4.2.1):
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (4.2.1)":
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - GoogleUtilities/AppDelegateSwizzler (8.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (8.1.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (8.1.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (8.1.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.1.0)
+  - GoogleUtilities/Reachability (8.1.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (8.1.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMSessionFetcher/Core (3.5.0)
+  - http_certificate_pinning (3.0.0):
+    - Alamofire (~> 5.9.0)
+    - CryptoSwift
+    - Flutter
+  - image_gallery_saver_plus (0.0.1):
+    - Flutter
+  - KeychainAccess (4.2.2)
+  - MLImage (1.0.0-beta6)
+  - MLKitBarcodeScanning (6.0.0):
+    - MLKitCommon (~> 12.0)
+    - MLKitVision (~> 8.0)
+  - MLKitCommon (12.0.0):
+    - GoogleDataTransport (~> 10.0)
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GoogleUtilities/Logger (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+  - MLKitVision (8.0.0):
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+    - MLImage (= 1.0.0-beta6)
+    - MLKitCommon (~> 12.0)
+  - MTBBarcodeScanner (5.0.11)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
+  - package_info_plus (0.4.5):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - permission_handler_apple (9.3.0):
+    - Flutter
+  - PromisesObjC (2.4.0)
+  - PromisesSwift (2.4.0):
+    - PromisesObjC (= 2.4.0)
+  - qr_code_scanner_plus (0.2.6):
+    - Flutter
+    - MTBBarcodeScanner
+  - syncfusion_flutter_pdfviewer (0.0.1):
+    - Flutter
+  - url_launcher_ios (0.0.1):
+    - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - app_links (from `../wash-app/.ios/.symlinks/plugins/app_links/ios`)
+  - app_settings (from `../wash-app/.ios/.symlinks/plugins/app_settings/ios`)
+  - camera_avfoundation (from `../wash-app/.ios/.symlinks/plugins/camera_avfoundation/ios`)
+  - device_info_plus (from `../wash-app/.ios/.symlinks/plugins/device_info_plus/ios`)
+  - firebase_core (from `../wash-app/.ios/.symlinks/plugins/firebase_core/ios`)
+  - firebase_crashlytics (from `../wash-app/.ios/.symlinks/plugins/firebase_crashlytics/ios`)
+  - firebase_dynamic_links (from `../wash-app/.ios/.symlinks/plugins/firebase_dynamic_links/ios`)
+  - firebase_messaging (from `../wash-app/.ios/.symlinks/plugins/firebase_messaging/ios`)
+  - Flutter (from `../wash-app/.ios/Flutter`)
+  - flutter_keyboard_visibility (from `../wash-app/.ios/.symlinks/plugins/flutter_keyboard_visibility/ios`)
+  - flutter_local_notifications (from `../wash-app/.ios/.symlinks/plugins/flutter_local_notifications/ios`)
+  - flutter_native_splash (from `../wash-app/.ios/.symlinks/plugins/flutter_native_splash/ios`)
+  - flutter_udid (from `../wash-app/.ios/.symlinks/plugins/flutter_udid/ios`)
+  - FlutterPluginRegistrant (from `../wash-app/.ios/Flutter/FlutterPluginRegistrant`)
+  - geolocator_apple (from `../wash-app/.ios/.symlinks/plugins/geolocator_apple/darwin`)
+  - google_maps_flutter_ios (from `../wash-app/.ios/.symlinks/plugins/google_maps_flutter_ios/ios`)
+  - google_mlkit_barcode_scanning (from `../wash-app/.ios/.symlinks/plugins/google_mlkit_barcode_scanning/ios`)
+  - google_mlkit_commons (from `../wash-app/.ios/.symlinks/plugins/google_mlkit_commons/ios`)
+  - http_certificate_pinning (from `../wash-app/.ios/.symlinks/plugins/http_certificate_pinning/ios`)
+  - image_gallery_saver_plus (from `../wash-app/.ios/.symlinks/plugins/image_gallery_saver_plus/ios`)
+  - package_info_plus (from `../wash-app/.ios/.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `../wash-app/.ios/.symlinks/plugins/path_provider_foundation/darwin`)
+  - permission_handler_apple (from `../wash-app/.ios/.symlinks/plugins/permission_handler_apple/ios`)
+  - qr_code_scanner_plus (from `../wash-app/.ios/.symlinks/plugins/qr_code_scanner_plus/ios`)
+  - syncfusion_flutter_pdfviewer (from `../wash-app/.ios/.symlinks/plugins/syncfusion_flutter_pdfviewer/ios`)
+  - url_launcher_ios (from `../wash-app/.ios/.symlinks/plugins/url_launcher_ios/ios`)
+  - webview_flutter_wkwebview (from `../wash-app/.ios/.symlinks/plugins/webview_flutter_wkwebview/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseDynamicLinks
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - FirebaseRemoteConfigInterop
+    - FirebaseSessions
+    - Google-Maps-iOS-Utils
+    - GoogleDataTransport
+    - GoogleMaps
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - KeychainAccess
+    - MLImage
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
+    - MTBBarcodeScanner
+    - nanopb
+    - PromisesObjC
+    - PromisesSwift
+
+EXTERNAL SOURCES:
+  app_links:
+    :path: "../wash-app/.ios/.symlinks/plugins/app_links/ios"
+  app_settings:
+    :path: "../wash-app/.ios/.symlinks/plugins/app_settings/ios"
+  camera_avfoundation:
+    :path: "../wash-app/.ios/.symlinks/plugins/camera_avfoundation/ios"
+  device_info_plus:
+    :path: "../wash-app/.ios/.symlinks/plugins/device_info_plus/ios"
+  firebase_core:
+    :path: "../wash-app/.ios/.symlinks/plugins/firebase_core/ios"
+  firebase_crashlytics:
+    :path: "../wash-app/.ios/.symlinks/plugins/firebase_crashlytics/ios"
+  firebase_dynamic_links:
+    :path: "../wash-app/.ios/.symlinks/plugins/firebase_dynamic_links/ios"
+  firebase_messaging:
+    :path: "../wash-app/.ios/.symlinks/plugins/firebase_messaging/ios"
+  Flutter:
+    :path: "../wash-app/.ios/Flutter"
+  flutter_keyboard_visibility:
+    :path: "../wash-app/.ios/.symlinks/plugins/flutter_keyboard_visibility/ios"
+  flutter_local_notifications:
+    :path: "../wash-app/.ios/.symlinks/plugins/flutter_local_notifications/ios"
+  flutter_native_splash:
+    :path: "../wash-app/.ios/.symlinks/plugins/flutter_native_splash/ios"
+  flutter_udid:
+    :path: "../wash-app/.ios/.symlinks/plugins/flutter_udid/ios"
+  FlutterPluginRegistrant:
+    :path: "../wash-app/.ios/Flutter/FlutterPluginRegistrant"
+  geolocator_apple:
+    :path: "../wash-app/.ios/.symlinks/plugins/geolocator_apple/darwin"
+  google_maps_flutter_ios:
+    :path: "../wash-app/.ios/.symlinks/plugins/google_maps_flutter_ios/ios"
+  google_mlkit_barcode_scanning:
+    :path: "../wash-app/.ios/.symlinks/plugins/google_mlkit_barcode_scanning/ios"
+  google_mlkit_commons:
+    :path: "../wash-app/.ios/.symlinks/plugins/google_mlkit_commons/ios"
+  http_certificate_pinning:
+    :path: "../wash-app/.ios/.symlinks/plugins/http_certificate_pinning/ios"
+  image_gallery_saver_plus:
+    :path: "../wash-app/.ios/.symlinks/plugins/image_gallery_saver_plus/ios"
+  package_info_plus:
+    :path: "../wash-app/.ios/.symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: "../wash-app/.ios/.symlinks/plugins/path_provider_foundation/darwin"
+  permission_handler_apple:
+    :path: "../wash-app/.ios/.symlinks/plugins/permission_handler_apple/ios"
+  qr_code_scanner_plus:
+    :path: "../wash-app/.ios/.symlinks/plugins/qr_code_scanner_plus/ios"
+  syncfusion_flutter_pdfviewer:
+    :path: "../wash-app/.ios/.symlinks/plugins/syncfusion_flutter_pdfviewer/ios"
+  url_launcher_ios:
+    :path: "../wash-app/.ios/.symlinks/plugins/url_launcher_ios/ios"
+  webview_flutter_wkwebview:
+    :path: "../wash-app/.ios/.symlinks/plugins/webview_flutter_wkwebview/darwin"
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  app_links: 3dbc685f76b1693c66a6d9dd1e9ab6f73d97dc0a
+  app_settings: 5127ae0678de1dcc19f2293271c51d37c89428b2
+  camera_avfoundation: be3be85408cd4126f250386828e9b1dfa40ab436
+  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  device_info_plus: 21fcca2080fbcd348be798aa36c3e5ed849eefbe
+  Firebase: d99ac19b909cd2c548339c2241ecd0d1599ab02e
+  firebase_core: 995454a784ff288be5689b796deb9e9fa3601818
+  firebase_crashlytics: 30dcd6dfd2fe895c0848af46722a4227346c19aa
+  firebase_dynamic_links: 043464a753bb1b442fc038885f18f392064a32c4
+  firebase_messaging: f4a41dd102ac18b840eba3f39d67e77922d3f707
+  FirebaseCore: efb3893e5b94f32b86e331e3bd6dadf18b66568e
+  FirebaseCoreExtension: edbd30474b5ccf04e5f001470bdf6ea616af2435
+  FirebaseCoreInternal: 9afa45b1159304c963da48addb78275ef701c6b4
+  FirebaseCrashlytics: e09d0bc19aa54a51e45b8039c836ef73f32c039a
+  FirebaseDynamicLinks: 639fc743dc9c9f01709139bf74319536a674f012
+  FirebaseInstallations: 317270fec08a5d418fdbc8429282238cab3ac843
+  FirebaseMessaging: 3b26e2cee503815e01c3701236b020aa9b576f09
+  FirebaseRemoteConfigInterop: 1c6135e8a094cc6368949f5faeeca7ee8948b8aa
+  FirebaseSessions: b9a92c1c51bbb81e78fc3142cda6d925d700f8e7
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_keyboard_visibility: 4625131e43015dbbe759d9b20daaf77e0e3f6619
+  flutter_local_notifications: a5a732f069baa862e728d839dd2ebb904737effb
+  flutter_native_splash: 6cad9122ea0fad137d23137dd14b937f3e90b145
+  flutter_udid: 92a5d31fe0526b7b6002a2318df702e12e7eb300
+  FlutterPluginRegistrant: 674d7f66f7e1d94cfcee22059ae15ef548bb38a0
+  geolocator_apple: ab36aa0e8b7d7a2d7639b3b4e48308394e8cef5e
+  Google-Maps-iOS-Utils: 0a484b05ed21d88c9f9ebbacb007956edd508a96
+  google_maps_flutter_ios: 0291eb2aa252298a769b04d075e4a9d747ff7264
+  google_mlkit_barcode_scanning: 8f5987f244a43fe1167689c548342a5174108159
+  google_mlkit_commons: 2abe6a70e1824e431d16a51085cb475b672c8aab
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleMaps: 0608099d4870cac8754bdba9b6953db543432438
+  GoogleMLKit: eff9e23ec1d90ea4157a1ee2e32a4f610c5b3318
+  GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
+  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
+  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
+  http_certificate_pinning: 133f28ad5c2d1ecda2581dd2d2cd9dc74da59012
+  image_gallery_saver_plus: e597bf65a7846979417a3eae0763b71b6dfec6c3
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  MLImage: 0ad1c5f50edd027672d8b26b0fee78a8b4a0fc56
+  MLKitBarcodeScanning: 0a3064da0a7f49ac24ceb3cb46a5bc67496facd2
+  MLKitCommon: 07c2c33ae5640e5380beaaa6e4b9c249a205542d
+  MLKitVision: 45e79d68845a2de77e2dd4d7f07947f0ed157b0e
+  MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
+  package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
+  permission_handler_apple: 4ed2196e43d0651e8ff7ca3483a069d469701f2d
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
+  qr_code_scanner_plus: 7e087021bc69873140e0754750eb87d867bed755
+  syncfusion_flutter_pdfviewer: 90dc48305d2e33d4aa20681d1e98ddeda891bc14
+  url_launcher_ios: a1c1f2bf89969cb13cce46d0333c7257d346e169
+  webview_flutter_wkwebview: 1821ceac936eba6f7984d89a9f3bcb4dea99ebb2
+
+PODFILE CHECKSUM: 6963d36f099fe58d43052f57094f2b5ce84c6430
+
+COCOAPODS: 1.16.2
