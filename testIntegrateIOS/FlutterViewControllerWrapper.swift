@@ -3,18 +3,35 @@ import Flutter
 import SwiftUI
 
 class FlutterViewControllerWrapper: UIViewController {
+    var flutterViewController: FlutterViewController? // เก็บไว้เป็นตัวแปรของ Class
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Use the shared engine
-        let flutterEngine = FlutterEngineManager.shared.flutterEngine
-        let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+        let flutterEngine = FlutterEngineManager.shared.getEngine()
+        // สร้างหน้า Flutter
+        let fvc = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+        self.flutterViewController = fvc
         
-        addChild(flutterViewController)
-        view.addSubview(flutterViewController.view)
-        flutterViewController.view.frame = view.bounds
-        flutterViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        flutterViewController.didMove(toParent: self)
+        addChild(fvc)
+        view.addSubview(fvc.view)
+        fvc.view.frame = view.bounds
+        fvc.didMove(toParent: self)
+    }
+
+    // --- เพิ่มส่วนนี้เข้าไปครับ ---
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // สำคัญมาก: เมื่อหน้าจอกำลังจะปิด ให้ถอด Engine ออกทันที
+        if let fvc = flutterViewController {
+            fvc.willMove(toParent: nil)
+            fvc.view.removeFromSuperview()
+            fvc.removeFromParent()
+        }
+        
+        // สั่ง Engine ให้รู้ว่าตอนนี้ไม่มีใครครอบครองแล้ว
+        FlutterEngineManager.shared.flutterEngine.viewController = nil
     }
 }
 
