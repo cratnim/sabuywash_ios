@@ -20,9 +20,22 @@ struct ContentView: View {
                 .cornerRadius(8)
             }
             .padding()
-            .sheet(isPresented: $showFlutter) {
-                FlutterViewRepresentable()
-            }
+            .fullScreenCover(isPresented: $showFlutter) {
+                ZStack(alignment: .topLeading) {
+                    FlutterViewRepresentable()
+                        .ignoresSafeArea()
+                    
+                    Button(action: {
+                        showFlutter = false
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                            .padding(.top, 20)
+                            .padding(.leading, 20)
+                    }
+                }
+}
         }
     }
 }

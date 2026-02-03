@@ -15,7 +15,14 @@ class FlutterViewControllerWrapper: UIViewController {
         
         addChild(fvc)
         view.addSubview(fvc.view)
-        fvc.view.frame = view.bounds
+        // fvc.view.frame = view.bounds
+        fvc.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            fvc.view.topAnchor.constraint(equalTo: view.topAnchor),
+            fvc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            fvc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            fvc.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
         fvc.didMove(toParent: self)
     }
 
