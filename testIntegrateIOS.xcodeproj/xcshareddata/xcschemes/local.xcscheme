@@ -52,7 +52,7 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "FLAVOR_TARGET"
+            key = "FLAVOR"
             value = "local"
             isEnabled = "YES">
          </EnvironmentVariable>

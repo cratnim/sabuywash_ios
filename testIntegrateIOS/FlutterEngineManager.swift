@@ -6,7 +6,7 @@ class FlutterEngineManager {
     let flavor: String
 
     private init() {
-        self.flavor = Bundle.main.infoDictionary?["Flavor"] as? String ?? "prod"
+        self.flavor = Bundle.main.infoDictionary?["FLAVOR"] as? String ?? "prod"
         
         print("Current Flavor: \(flavor)")
         
