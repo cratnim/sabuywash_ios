@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>930284239810-aintp2j529ng0hon3q5sp8nnguqm9k28.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.930284239810-aintp2j529ng0hon3q5sp8nnguqm9k28</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>930284239810-qfegevgek54unr3ifvdun9p5jc31aau2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAVvk1vVdqpJRuNcP1qQFEp8bOslSKCz7k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>930284239810</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sabuywash.sabuywashapp</string>
+	<key>PROJECT_ID</key>
+	<string>sabuy-wash</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sabuy-wash.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:930284239810:ios:d5776925e47ad752a7745b</string>
+</dict>
+</plist>

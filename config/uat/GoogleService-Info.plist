@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBuu2g3dgRn2mkwcwLia7HQtFzIUuYMuIM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>85548905693</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sabuywash.sabuywashapp.uat</string>
+	<key>PROJECT_ID</key>
+	<string>sabuy-wash-uat</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sabuy-wash-uat.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:85548905693:ios:c2b14428732bd37d129734</string>
+</dict>
+</plist>

@@ -16,6 +16,7 @@
 		3E25E1670556A657F434D55E /* Pods-testIntegrateIOS.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testIntegrateIOS.uat.xcconfig"; path = "Target Support Files/Pods-testIntegrateIOS/Pods-testIntegrateIOS.uat.xcconfig"; sourceTree = "<group>"; };
 		54866342EBE5F63033375C91 /* Pods-testIntegrateIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testIntegrateIOS.debug.xcconfig"; path = "Target Support Files/Pods-testIntegrateIOS/Pods-testIntegrateIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9A7F4C66F3F59F339070AC7E /* Pods-testIntegrateIOS.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testIntegrateIOS.dev.xcconfig"; path = "Target Support Files/Pods-testIntegrateIOS/Pods-testIntegrateIOS.dev.xcconfig"; sourceTree = "<group>"; };
+		9A95A8989A4BD67072747D68 /* Pods-testIntegrateIOS.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testIntegrateIOS.prod.xcconfig"; path = "Target Support Files/Pods-testIntegrateIOS/Pods-testIntegrateIOS.prod.xcconfig"; sourceTree = "<group>"; };
 		C6725812BC748D8320F2922F /* Pods-testIntegrateIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testIntegrateIOS.release.xcconfig"; path = "Target Support Files/Pods-testIntegrateIOS/Pods-testIntegrateIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +78,7 @@
 				C6725812BC748D8320F2922F /* Pods-testIntegrateIOS.release.xcconfig */,
 				9A7F4C66F3F59F339070AC7E /* Pods-testIntegrateIOS.dev.xcconfig */,
 				3E25E1670556A657F434D55E /* Pods-testIntegrateIOS.uat.xcconfig */,
+				9A95A8989A4BD67072747D68 /* Pods-testIntegrateIOS.prod.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 				1D761803F53E19862210CB18 /* [CP-User] Run Flutter Build smilewash_module Script */,
 				0960B17C2F18CCB600E5FC1D /* Sources */,
 				0960B17D2F18CCB600E5FC1D /* Frameworks */,
+				2FCE05E42F3244690069D11D /* Setup Firebase Environment */,
 				0960B17E2F18CCB600E5FC1D /* Resources */,
 				AF8019F06DE0367F0A140535 /* [CP-User] Embed Flutter Build smilewash_module Script */,
 				67388DD6633E16D275020DA0 /* [CP] Copy Pods Resources */,
@@ -170,6 +173,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../wash-app/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		2FCE05E42F3244690069D11D /* Setup Firebase Environment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase Environment";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# 1. รับค่า Configuration (เช่น Debug-dev, Release-prod)\n# ขึ้นอยู่กับว่าคุณตั้งชื่อ Flavor ใน Flutter ว่าอะไร\n# สมมติว่าตั้งชื่อ Flavor ว่า \"dev\" และ \"prod\"\n\nENVIRONMENT=\"prod\" # ตั้งค่า Default เป็น prod ไว้ก่อนเพื่อความปลอดภัย\n\n# ตรวจสอบชื่อ Configuration ว่ามีคำว่า \"dev\" หรือไม่\nif [[ $CONFIGURATION == *\"dev\"* ]]; then\n    ENVIRONMENT=\"dev\"\nelif [[ $CONFIGURATION == *\"staging\"* ]]; then\n    ENVIRONMENT=\"staging\"\nfi\n\n# 2. กำหนด Path ต้นทาง และ ปลายทาง\n# ต้นทาง: ดึงจากโฟลเดอร์ที่เราสร้างไว้\nSOURCE_PATH=\"${PROJECT_DIR}/config/${ENVIRONMENT}/GoogleService-Info.plist\"\n\n# ปลายทาง: วางลงใน App Bundle ที่กำลัง Build\nDESTINATION_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# 3. สั่ง Copy\n# เช็คก่อนว่ามีไฟล์ต้นทางไหม\nif [ -f \"$SOURCE_PATH\" ]; then\n    echo \"Copying Firebase config from $SOURCE_PATH to $DESTINATION_PATH\"\n    cp \"${SOURCE_PATH}\" \"${DESTINATION_PATH}\"\nelse\n    echo \"Error: Firebase config file not found at $SOURCE_PATH\"\n    exit 1\nfi\n";
 		};
 		5E533555B0A1D54C7787AE08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -379,7 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = application.sabuy.testIntegrateIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabuywash.sabuywashapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -419,7 +440,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = application.sabuy.testIntegrateIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabuywash.sabuywashapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -431,6 +452,102 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		2FCE05E52F325A0B0069D11D /* prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = prod;
+		};
+		2FCE05E62F325A0B0069D11D /* prod */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A95A8989A4BD67072747D68 /* Pods-testIntegrateIOS.prod.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4M3HBF9YJ9;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FLAVOR_TARGET = prod;
+				FLUTTER_BUILD_MODE = debug;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testIntegrateIOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabuywash.sabuywashapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = prod;
 		};
 		4D84BC1B2F2B9EE900CCA106 /* Dev */ = {
 			isa = XCBuildConfiguration;
@@ -522,7 +639,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = application.sabuy.testIntegrateIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabuywash.sabuywashapp.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -618,7 +735,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = application.sabuy.testIntegrateIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabuywash.sabuywashapp.uat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -640,6 +757,7 @@
 				0960B1892F18CCB700E5FC1D /* Debug */,
 				4D84BC1B2F2B9EE900CCA106 /* Dev */,
 				0960B18A2F18CCB700E5FC1D /* Release */,
+				2FCE05E52F325A0B0069D11D /* prod */,
 				4D84BC1D2F2B9EF500CCA106 /* UAT */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -651,6 +769,7 @@
 				0960B18C2F18CCB700E5FC1D /* Debug */,
 				4D84BC1C2F2B9EE900CCA106 /* Dev */,
 				0960B18D2F18CCB700E5FC1D /* Release */,
+				2FCE05E62F325A0B0069D11D /* prod */,
 				4D84BC1E2F2B9EF500CCA106 /* UAT */,
 			);
 			defaultConfigurationIsVisible = 0;
