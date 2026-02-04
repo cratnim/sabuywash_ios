@@ -4,5 +4,11 @@
 <dict>
 	<key>Flavor</key>
 	<string>$(FLAVOR_TARGET)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location permission is required to display your location on the branch map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location permission is required to display your location on the branch map.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera permission is required for barcode scanning.</string>
 </dict>
 </plist>
