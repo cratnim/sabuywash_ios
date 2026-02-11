@@ -24,16 +24,6 @@ struct ContentView: View {
                 ZStack(alignment: .topLeading) {
                     FlutterViewRepresentable()
                         .ignoresSafeArea()
-                    
-                    Button(action: {
-                        showFlutter = false
-                    }) {
-                        Image(systemName: "xmark")
-                            .font(.largeTitle)
-                            .foregroundColor(.black)
-                            .padding(.top, 20)
-                            .padding(.leading, 20)
-                    }
                 }
 }
         }
