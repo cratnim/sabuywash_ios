@@ -29,7 +29,7 @@ class FlutterEngineManager {
 
     private func setupMethodChannel() {
         ssoChannel?.setMethodCallHandler { [weak self] (call, result) in
-            if call.method == "getSuperAppToken" {
+            if call.method == "getAuthentikToken" {
                 self?.handleGetToken(result: result)
             } else {
                 result(FlutterMethodNotImplemented)
@@ -38,13 +38,11 @@ class FlutterEngineManager {
     }
 
     private func handleGetToken(result: @escaping FlutterResult) {
-        let tokenData: [String: Any] = [
-            "access_token": "your_actual_access_token_here",
-            "refresh_token": "your_actual_refresh_token_here",
-            "access_token_expires_in": 3600
+        let currentToken = "latest_authentik_token"
+        let response: [String: Any] = [
+                "authentik_token": currentToken
         ]
-        
-        result(tokenData)
+        result(response)
     }
 
     func getEngine() -> FlutterEngine {
