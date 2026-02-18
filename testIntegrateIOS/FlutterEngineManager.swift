@@ -31,6 +31,9 @@ class FlutterEngineManager {
         ssoChannel?.setMethodCallHandler { [weak self] (call, result) in
             if call.method == "getAuthentikToken" {
                 self?.handleGetToken(result: result)
+            } else if call.method == "getLocale" {
+                let currentLocale = Bundle.main.preferredLocalizations.first ?? "th"
+                result(currentLocale)
             } else {
                 result(FlutterMethodNotImplemented)
             }
